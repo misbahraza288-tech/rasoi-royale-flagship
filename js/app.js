@@ -69,7 +69,7 @@ function render() {
       </div>
       <button class="branchbtn" data-act="branch" aria-label="${esc(T('branch'))}">${icon('store')}<span>${esc(b.name)}</span>${icon('arrow', 'chev')}</button>
     </header>
-    <main class="screen" id="screen">${body}</main>
+    <main class="screen" id="screen">${body}<div class="footline">${esc(footerLine())}</div></main>
     <nav class="bottomnav" aria-label="Main">
       ${navBtn('home', 'home', T('navHome'))}
       ${navBtn('menu', 'menu', T('navMenu'))}
@@ -77,8 +77,7 @@ function render() {
       ${navBtn('orders', 'orders', T('navOrders'))}
       ${navBtn('more', 'more', T('navMore'))}
     </nav>
-    ${sheet()}
-    <div class="footline">${esc(footerLine())}</div>`;
+    ${sheet()}`;
 }
 const navBtn = (id, ic, label, n = 0) => `<button class="${ui.tab === id ? 'on' : ''}" data-act="tab" data-tab="${id}" aria-current="${ui.tab === id}">${icon(ic)}<span>${esc(label)}</span>${n ? `<em>${n}</em>` : ''}</button>`;
 
@@ -112,7 +111,7 @@ function home(b, open) {
       <button class="qa" data-act="share">${icon('share')}<span>${esc(T('share'))}</span></button>
     </section>
     ${reorder}
-    <section class="block"><div class="sechead"><h2>${esc(T('offers'))}</h2><small>${esc(T('samplePhotos'))}</small></div>
+    <section class="block"><div class="sechead"><h2>${esc(T('offers'))}</h2><small>${esc(T('sampleOffers'))}</small></div>
       <div class="rail">${cards}</div></section>
     <section class="block"><div class="sechead"><h2>${esc(T('categories'))}</h2></div>
       <div class="catgrid">${cats.map((c) => `
