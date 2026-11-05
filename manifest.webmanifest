@@ -1,0 +1,17 @@
+{
+  "name": "Rasoi Royale (Sample) — order app demo",
+  "short_name": "Rasoi Royale",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f4ee",
+  "theme_color": "#8c1d2b",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
